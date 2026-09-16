@@ -210,7 +210,7 @@ function descargarCSV(reservas: Reserva[]) {
   URL.revokeObjectURL(url);
 }
 
-function ReservasPage() {
+export function ReservasPage() {
   const { user, isAdmin } = useAuth();
   const horas = useMemo(() => generarHoras(), []);
   const [fecha, setFecha] = useState(fechaHoyISO());
