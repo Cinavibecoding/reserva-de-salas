@@ -10,6 +10,13 @@ type Reserva = Record<string, any>;
 
 const STORAGE_KEY = "reservas-demo-v1";
 
+// Fecha local (no UTC) para que coincida con fechaHoyISO() del componente —
+// toISOString() usa UTC y puede caer en el día siguiente según la zona horaria.
+function hoyLocal() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
 const SEED: Reserva[] = [
   {
     id: "demo-1",
@@ -19,7 +26,7 @@ const SEED: Reserva[] = [
     piso_externo: "",
     ubicacion: "Piso 2",
     capacidad: 40,
-    fecha: new Date().toISOString().slice(0, 10),
+    fecha: hoyLocal(),
     inicio: "09:00:00",
     fin: "11:00:00",
     solicitante: "María Gómez",
@@ -56,7 +63,7 @@ const SEED: Reserva[] = [
     piso_externo: "",
     ubicacion: "Piso 2",
     capacidad: 20,
-    fecha: new Date().toISOString().slice(0, 10),
+    fecha: hoyLocal(),
     inicio: "14:00:00",
     fin: "15:00:00",
     solicitante: "Carlos Pérez",
@@ -93,7 +100,7 @@ const SEED: Reserva[] = [
     piso_externo: "",
     ubicacion: "Piso 2",
     capacidad: 40,
-    fecha: new Date().toISOString().slice(0, 10),
+    fecha: hoyLocal(),
     inicio: "16:00:00",
     fin: "17:00:00",
     solicitante: "Ana Torres",
