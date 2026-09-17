@@ -64,14 +64,14 @@ type Sala = {
 };
 
 const SALAS: Sala[] = [
-  { id: "sala-1", nombre: "Sala 1", ubicacion: "Piso 2", capacidad: 40, requierePiso: false },
-  { id: "sala-2", nombre: "Sala 2", ubicacion: "Piso 2", capacidad: 40, requierePiso: false },
-  { id: "sala-4", nombre: "Sala 4", ubicacion: "Piso 2", capacidad: 20, requierePiso: false },
-  { id: "sala-5", nombre: "Sala 5", ubicacion: "Piso 2", capacidad: 20, requierePiso: false },
-  { id: "sala-externa", nombre: "Sala externa", ubicacion: "Pisos 3 al 11", capacidad: 8, requierePiso: true },
+  { id: "sala-3", nombre: "Sala 3", ubicacion: "Piso 5", capacidad: 35, requierePiso: false },
+  { id: "sala-6", nombre: "Sala 6", ubicacion: "Piso 5", capacidad: 28, requierePiso: false },
+  { id: "sala-9", nombre: "Sala 9", ubicacion: "Piso 5", capacidad: 16, requierePiso: false },
+  { id: "sala-12", nombre: "Sala 12", ubicacion: "Piso 5", capacidad: 14, requierePiso: false },
+  { id: "sala-satelite", nombre: "Sala satélite", ubicacion: "Pisos 14 al 22", capacidad: 6, requierePiso: true },
 ];
 
-const PISOS_EXTERNOS = [3, 4, 5, 6, 7, 8, 9, 10, 11];
+const PISOS_EXTERNOS = [14, 15, 16, 17, 18, 19, 20, 21, 22];
 
 const ACOMODOS_SALA = [
   "Auditorio",
